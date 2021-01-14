@@ -6,7 +6,7 @@
    After launching, Login interface will ask you to enter your credentials along with your role (admin or volunteer), your role specifies where to go then.
    
    * Volunteer Options:
-      [Image on Drive](https://drive.google.com/open?id=1_VzDsGVtiPytST7hRzhLmzFJ4neZM3hm)
+      [Image on Drive](https://drive.google.com/open?id=19S95lTRz5toGrwzZFCzNCR6whdRR2RMZ)
         1. Record students attendance of each lecture, or import excel file of a previous lecture record, it's possible to edit attendance state directly by double click on the cell.
 	      
         2. Add new or existing student to a specific majles he(the volunteer) is responsible for.
@@ -21,7 +21,7 @@
       
       
    * Admin Options:
-      [Image on Drive](https://drive.google.com/open?id=19S95lTRz5toGrwzZFCzNCR6whdRR2RMZ)
+      [Image on Drive](https://drive.google.com/open?id=1_VzDsGVtiPytST7hRzhLmzFJ4neZM3hm)
         
         1. Add new Volunteers.
         
