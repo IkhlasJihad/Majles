@@ -40,7 +40,6 @@ public class DBModel {
         try {
             conn = source.getConnection();
         } catch (SQLException ex) {
-            Logger.getLogger(DBModel.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
     
@@ -72,7 +71,6 @@ public class DBModel {
             }  
             return maj;
         } catch (SQLException ex) {            
-            Logger.getLogger(DBModel.class.getName()).log(Level.SEVERE, null, ex);
             return null;
         }
     
@@ -100,7 +98,6 @@ public class DBModel {
             }  
             return regions;
         } catch (SQLException ex) {            
-            Logger.getLogger(DBModel.class.getName()).log(Level.SEVERE, null, ex);
             return null;
         }
     }
@@ -116,7 +113,6 @@ public class DBModel {
             }
             return name;
         }catch (SQLException ex) {            
-            Logger.getLogger(DBModel.class.getName()).log(Level.SEVERE, null, ex);
             return null;
         }
     } 
