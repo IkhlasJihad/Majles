@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="root" opacity="0.6" prefHeight="450.0" prefWidth="600.0" style="-fx-background-color: #faf1cf;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.AttendanceController">
+   <children>
+      <Label alignment="CENTER_RIGHT" layoutX="185.0" layoutY="3.0" prefHeight="71.0" prefWidth="230.0" text="تسجيل الحضور" textAlignment="RIGHT" textFill="#001621">
+         <font>
+            <Font name="Led Italic Font" size="30.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="lec_combo" layoutX="345.0" layoutY="127.0" opacity="0.7" prefHeight="30.0" prefWidth="131.0" promptText="انقر للاختيار" />
+      <Label alignment="CENTER_RIGHT" layoutX="483.0" layoutY="76.0" prefHeight="37.0" prefWidth="96.0" text=" المجلس:" textAlignment="RIGHT" textFill="#001621">
+         <font>
+            <Font name="Led Italic Font" size="15.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER_RIGHT" layoutX="478.0" layoutY="120.0" prefHeight="37.0" prefWidth="104.0" text="رقم المحاضرة:" textAlignment="RIGHT" textFill="#001621">
+         <font>
+            <Font name="Led Italic Font" size="15.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER_RIGHT" layoutX="251.0" layoutY="160.0" prefHeight="37.0" prefWidth="112.0" text="أو  رقم الطالب:" textAlignment="RIGHT" textFill="#001621">
+         <font>
+            <Font name="Led Italic Font" size="15.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="30.0" fitWidth="22.0" layoutX="14.0" layoutY="14.0" onMouseClicked="#nav_back" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../close.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="save" fitHeight="37.0" fitWidth="42.0" layoutX="78.0" layoutY="164.0" onMouseClicked="#onSave" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../5874.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="getreport" fitHeight="43.0" fitWidth="55.0" layoutX="30.0" layoutY="160.0" onMouseClicked="#ongetreport" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../reportattendance.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="majTitle" alignment="CENTER_RIGHT" layoutX="69.0" layoutY="77.0" prefHeight="43.0" prefWidth="443.0" textAlignment="RIGHT" textFill="#0772a8">
+         <font>
+            <Font name="Led Italic Font" size="14.0" />
+         </font>
+      </Label>
+      <AnchorPane fx:id="report_root" layoutX="9.0" layoutY="209.0" prefHeight="227.0" prefWidth="581.0" style="-fx-background-color: #faf1cf;" visible="false">
+         <children>
+            <TableView fx:id="attTable" editable="true" layoutX="102.0" layoutY="30.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="185.0" prefWidth="378.0" style="-fx-background-color: لقثثى;">
+              <columns>
+                  <TableColumn fx:id="lec_id" prefWidth="84.0" text="رقم المحاضرة" />
+                  <TableColumn fx:id="date" prefWidth="146.0" text="تاريخ المحاضرة" />
+                  <TableColumn fx:id="attends" prefWidth="154.0" text="حالة الحضور (1:ح، 0:غ)" />
+              </columns>
+            </TableView>
+            <Label fx:id="name" alignment="CENTER_RIGHT" layoutX="384.0" layoutY="1.0" prefHeight="22.0" prefWidth="191.0" textAlignment="RIGHT" textFill="#268233">
+               <font>
+                  <Font name="Led Italic Font" size="12.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <Label fx:id="label_out" alignment="CENTER_RIGHT" layoutX="38.0" layoutY="117.0" prefHeight="43.0" prefWidth="147.0" textFill="RED" />
+      <TextField fx:id="std_id" layoutX="120.0" layoutY="169.0" onKeyPressed="#clearReport" onKeyReleased="#clearReport" opacity="0.7" prefHeight="30.0" prefWidth="131.0" />
+      <ImageView fitHeight="43.0" fitWidth="52.0" layoutX="374.0" layoutY="163.0" onMouseClicked="#getFromExcel" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../fromexcel.png" />
+         </image>
+      </ImageView>
+      <Label alignment="CENTER_RIGHT" layoutX="418.0" layoutY="163.0" prefHeight="37.0" prefWidth="156.0" text=" استيراد ملف إكسل" textAlignment="RIGHT" textFill="#001621">
+         <font>
+            <Font name="Led Italic Font" size="15.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

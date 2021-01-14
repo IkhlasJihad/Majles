@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="root" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #f1f2f8;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.AddStdController">
+   <children>
+      <Button fx:id="close" layoutX="41.0" layoutY="307.0" mnemonicParsing="false" onAction="#nav_back" prefHeight="44.0" prefWidth="78.0" style="-fx-background-color: #182978;" text="إغلاق" textFill="WHITE">
+         <font>
+            <Font name="Led Italic Font" size="15.0" />
+         </font>
+      </Button>
+      <Button fx:id="add" layoutX="138.0" layoutY="307.0" mnemonicParsing="false" onAction="#addStudent" prefHeight="44.0" prefWidth="78.0" style="-fx-background-color: #182978;" text="إضافة" textFill="WHITE">
+         <font>
+            <Font name="Led Italic Font" size="15.0" />
+         </font>
+      </Button>
+      <TextField fx:id="fname" alignment="CENTER_RIGHT" layoutX="385.0" layoutY="82.0" opacity="0.6" prefHeight="30.0" prefWidth="96.0" promptText="الأول" style="-fx-background-color: #acbfe6;">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+      <Label alignment="CENTER" layoutX="216.0" layoutY="2.0" prefHeight="66.0" prefWidth="169.0" text="إضافة طالب" textAlignment="CENTER" textFill="#182978">
+         <font>
+            <Font name="Led Italic Font" size="28.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER_RIGHT" layoutX="508.0" layoutY="77.0" prefHeight="37.0" prefWidth="43.0" text="الاسم" textAlignment="RIGHT" textFill="#182978">
+         <font>
+            <Font name="Led Italic Font" size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="phone" alignment="TOP_RIGHT" layoutX="313.0" layoutY="231.0" opacity="0.6" prefHeight="30.0" prefWidth="169.0" style="-fx-background-color: #acbfe6;">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+      <Label alignment="CENTER_RIGHT" layoutX="516.0" layoutY="225.0" prefHeight="37.0" prefWidth="53.0" text="الهاتف" textAlignment="CENTER" textFill="#182978">
+         <font>
+            <Font name="Led Italic Font" size="15.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER_RIGHT" layoutX="506.0" layoutY="124.0" prefHeight="37.0" prefWidth="53.0" text="الجنس" textFill="#182978">
+         <font>
+            <Font name="Led Italic Font" size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="sname" alignment="CENTER_RIGHT" layoutX="282.0" layoutY="82.0" opacity="0.6" prefHeight="30.0" prefWidth="96.0" promptText="الثاني" style="-fx-background-color: #acbfe6;">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="tname" alignment="CENTER_RIGHT" layoutX="178.0" layoutY="82.0" opacity="0.6" prefHeight="30.0" prefWidth="96.0" promptText="الثالث" style="-fx-background-color: #acbfe6;">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="lastname" alignment="CENTER_RIGHT" layoutX="72.0" layoutY="82.0" opacity="0.6" prefHeight="30.0" prefWidth="96.0" promptText="الرابع" style="-fx-background-color: #acbfe6;">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+      <ComboBox fx:id="genderCombo" layoutX="313.0" layoutY="131.0" nodeOrientation="RIGHT_TO_LEFT" opacity="0.6" prefHeight="30.0" prefWidth="169.0" style="-fx-background-color: #acbfe6;" />
+      <Label alignment="CENTER_RIGHT" layoutX="504.0" layoutY="177.0" prefHeight="37.0" prefWidth="64.0" text="المنطقة" textFill="#182978">
+         <font>
+            <Font name="Led Italic Font" size="15.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="regionCombo" layoutX="313.0" layoutY="181.0" nodeOrientation="RIGHT_TO_LEFT" opacity="0.6" prefHeight="30.0" prefWidth="169.0" style="-fx-background-color: #acbfe6;" />
+      <Label fx:id="label_out" alignment="CENTER" layoutX="258.0" layoutY="288.0" prefHeight="66.0" prefWidth="310.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="55.0" layoutY="80.0" text="*" textFill="RED" />
+      <Label layoutX="298.0" layoutY="181.0" text="*" textFill="RED" />
+      <Label layoutX="298.0" layoutY="227.0" text="*" textFill="RED" />
+   </children>
+</AnchorPane>

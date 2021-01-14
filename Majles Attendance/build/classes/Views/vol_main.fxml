@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonType?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DialogPane?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="root" prefHeight="450.0" prefWidth="600.0" style="-fx-background-color: #F7F7F7;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.Vol_MainController">
+   <children>
+      <ImageView fx:id="volunteer" fitHeight="28.0" fitWidth="23.0" layoutX="480.0" layoutY="34.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../volunteernew2.png" />
+         </image>
+      </ImageView>
+      <ComboBox fx:id="majlesCombo" layoutX="457.0" layoutY="93.0" prefHeight="28.0" prefWidth="126.0" promptText="اختر المجلس" style="-fx-background-color: white;" />
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="457.0" prefHeight="75.0" prefWidth="143.0" text="بوابة المتطوعين" textAlignment="CENTER" textFill="#ff5100">
+         <font>
+            <Font name="DecoType Naskh Swashes" size="26.0" />
+         </font>
+      </Label>
+      <Label layoutX="530.0" layoutY="70.0" prefHeight="21.0" prefWidth="62.0" text="أنت مسجّل ك" textAlignment="CENTER">
+         <font>
+            <Font name="Arial" size="12.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="img" fitHeight="187.0" fitWidth="201.0" layoutX="177.0" layoutY="155.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../designChoose.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="attendance_img" fitHeight="90.0" fitWidth="90.0" layoutX="228.0" layoutY="70.0" onMouseClicked="#on_attendance" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../attends.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="addStd_img" fitHeight="90.0" fitWidth="90.0" layoutX="355.0" layoutY="160.0" onMouseClicked="#on_addStd" pickOnBounds="true" preserveRatio="true" rotate="-8.0">
+         <image>
+            <Image url="@../stdadd.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="reports_img" fitHeight="90.0" fitWidth="90.0" layoutX="98.0" layoutY="160.0" onMouseClicked="#getReports" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../reports.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="addLec_img" fitHeight="90.0" fitWidth="90.0" layoutX="138.0" layoutY="309.0" onMouseClicked="#on_addLectures" pickOnBounds="true" preserveRatio="true" rotate="-30.0">
+         <image>
+            <Image url="@../addLec.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="edit_img" fitHeight="90.0" fitWidth="90.0" layoutX="319.0" layoutY="306.0" onMouseClicked="#on_edit" pickOnBounds="true" preserveRatio="true" rotate="35.0">
+         <image>
+            <Image url="@../edit.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="label_vol" alignment="CENTER_RIGHT" layoutX="467.0" layoutY="69.0" prefHeight="21.0" prefWidth="62.0" textAlignment="CENTER">
+         <font>
+            <Font name="Arial Bold" size="12.0" />
+         </font>
+      </Label>
+      <Button fx:id="logout" layoutX="10.0" layoutY="93.0" mnemonicParsing="false" onAction="#onLogOut" style="-fx-background-color: white;" text="تسجيل خروج" />
+      <AnchorPane fx:id="addSTD_root" layoutX="100.0" layoutY="155.0" opacity="0.95" prefHeight="219.0" prefWidth="346.0" style="-fx-background-color: white;" visible="false">
+         <children>
+            <Label alignment="CENTER" layoutX="81.0" layoutY="10.0" prefHeight="66.0" prefWidth="204.0" text="إضافة طالب" textAlignment="CENTER" textFill="#ff5000">
+               <font>
+                  <Font name="Led Italic Font" size="28.0" />
+               </font>
+            </Label>
+            <Label fx:id="label_stdroot" layoutX="63.0" layoutY="156.0" prefHeight="47.0" prefWidth="222.0" />
+            <Button fx:id="new_btn" layoutX="157.0" layoutY="85.0" mnemonicParsing="false" onAction="#Onnew" prefHeight="47.0" prefWidth="122.0" style="-fx-background-color: black;" text="طالب جديد" textFill="#ff5000">
+               <font>
+                  <Font name="Led Italic Font" size="15.0" />
+               </font>
+            </Button>
+            <Button fx:id="exist_btn" layoutX="71.0" layoutY="85.0" mnemonicParsing="false" onAction="#Onexist" prefHeight="47.0" prefWidth="72.0" style="-fx-background-color: black;" text="مسجّل" textFill="#ff5000">
+               <font>
+                  <Font name="Led Italic Font" size="15.0" />
+               </font>
+            </Button>
+            <ImageView fx:id="closeImg" fitHeight="13.0" fitWidth="13.0" layoutX="14.0" layoutY="14.0" onMouseClicked="#onClosestdroot" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../close.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="exist_root" layoutX="162.0" layoutY="168.0" prefHeight="161.0" prefWidth="222.0" style="-fx-background-color: white;" visible="false">
+         <children>
+            <Label fx:id="exist_label" layoutX="38.0" layoutY="118.0" prefHeight="35.0" prefWidth="153.0" />
+            <TextField fx:id="exist_id" alignment="CENTER_RIGHT" layoutX="31.0" layoutY="23.0" opacity="0.9" prefHeight="35.0" prefWidth="162.0" promptText="رقم الطالب" style="-fx-background-color: white;" />
+            <Button fx:id="add" layoutX="76.0" layoutY="66.0" mnemonicParsing="false" onAction="#addExist" prefHeight="35.0" prefWidth="72.0" style="-fx-background-color: black;" text="إضافة" textFill="#ff5000">
+               <font>
+                  <Font name="Led Italic Font" size="15.0" />
+               </font>
+            </Button>
+            <ImageView fitHeight="21.0" fitWidth="23.0" layoutX="2.0" layoutY="3.0" onMouseClicked="#OnExistclose" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../close.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <DialogPane fx:id="logoutDialog" contentText="أنت على وشك إنهاء الجلسة، هل تريد المتابعة؟" focusTraversable="true" headerText="          تسجيل خروج" layoutX="134.0" layoutY="173.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="95.0" prefWidth="373.0" style="-fx-background-color: white;" visible="false">
+         <buttonTypes>
+            <ButtonType fx:id="del_no" fx:constant="NO" />
+            <ButtonType fx:id="del_yes" fx:constant="YES" />
+         </buttonTypes>
+      </DialogPane>
+   </children>
+</AnchorPane>

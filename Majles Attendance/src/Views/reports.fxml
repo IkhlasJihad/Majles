@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="root" opacity="0.6" prefHeight="450.0" prefWidth="600.0" style="-fx-background-image:url('back.png');-fx-background-size: 100% 100%;    " xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.ReportsController">
+   <children>
+      <Label alignment="CENTER_RIGHT" layoutX="144.0" prefHeight="71.0" prefWidth="296.0" text="استخراج الكشوفات" textAlignment="RIGHT" textFill="#0049ff">
+         <font>
+            <Font name="Led Italic Font" size="30.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="reportCombo" layoutX="265.0" layoutY="125.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="37.0" prefWidth="310.0" promptText="كــشــف بــ ...." style="-fx-background-color: white;" />
+      <ComboBox fx:id="majlesCombo" layoutX="464.0" layoutY="81.0" nodeOrientation="RIGHT_TO_LEFT" onAction="#onMajChanged" prefHeight="37.0" prefWidth="111.0" promptText="اختر المجلس" style="-fx-background-color: white;" />
+      <Label fx:id="majTitle" alignment="CENTER_RIGHT" layoutX="42.0" layoutY="71.0" prefHeight="47.0" prefWidth="419.0" textAlignment="RIGHT" textFill="#0049ff">
+         <font>
+            <Font name="Led Italic Font" size="18.0" />
+         </font>
+      </Label>
+      <AnchorPane fx:id="getLec_root" layoutX="156.0" layoutY="220.0" prefHeight="153.0" prefWidth="278.0" style="-fx-background-color: #001621;" visible="false">
+         <children>
+            <Label fx:id="label_lec" layoutX="71.0" layoutY="107.0" prefHeight="35.0" prefWidth="153.0" />
+            <ImageView fitHeight="21.0" fitWidth="23.0" layoutX="2.0" layoutY="3.0" onMouseClicked="#onLecClose" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../exit.png" />
+               </image>
+            </ImageView>
+            <ComboBox fx:id="lec_combo" layoutX="77.0" layoutY="12.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="37.0" prefWidth="139.0" promptText="انقر للاختيار" style="-fx-background-color: white;" />
+            <Button fx:id="selectLec1" layoutX="111.0" layoutY="58.0" mnemonicParsing="false" onMouseClicked="#onSelectLec1" prefHeight="47.0" prefWidth="72.0" style="-fx-background-color: white;" text="عرض" textFill="#d2951c">
+               <font>
+                  <Font name="Led Italic Font" size="15.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="search_root" layoutX="177.0" layoutY="174.0" prefHeight="161.0" prefWidth="258.0" style="-fx-background-color: #001621;" visible="false">
+         <children>
+            <Label fx:id="exist_label1" alignment="CENTER" layoutX="7.0" layoutY="120.0" prefHeight="35.0" prefWidth="243.0" />
+            <Button fx:id="add1" layoutX="97.0" layoutY="67.0" mnemonicParsing="false" onAction="#onSearch" prefHeight="47.0" prefWidth="64.0" style="-fx-background-color: white;" text="بحث" textFill="#d2951c">
+               <font>
+                  <Font name="Led Italic Font" size="15.0" />
+               </font>
+            </Button>
+            <ImageView fx:id="close_search" fitHeight="21.0" fitWidth="23.0" layoutX="-1.0" layoutY="-1.0" onMouseClicked="#onSearchClose" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../exit.png" />
+               </image>
+            </ImageView>
+            <TextField fx:id="search" alignment="CENTER_RIGHT" layoutX="26.0" layoutY="15.0" onKeyPressed="#clearReport" onKeyReleased="#clearReport" prefHeight="47.0" prefWidth="222.0" promptText="عنوان المحاضرة">
+               <font>
+                  <Font size="14.0" />
+               </font></TextField>
+         </children>
+      </AnchorPane>
+      
+      <ImageView fx:id="select" fitHeight="54.0" fitWidth="65.0" layoutX="207.0" layoutY="115.0" onMouseClicked="#onSelect" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../true.png" />
+         </image>
+      </ImageView>
+      <AnchorPane fx:id="attends90_root" layoutX="25.0" layoutY="178.0" prefHeight="259.0" prefWidth="553.0" style="-fx-background-color: white;" visible="false">
+         <children>
+            <TableView fx:id="com_table" editable="true" layoutX="75.0" layoutY="26.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="200.0" prefWidth="459.0" style="-fx-background-color: لقثثى;">
+               <columns>
+                  <TableColumn fx:id="com_id" prefWidth="86.0" text="رقم الطالب" />
+                  <TableColumn fx:id="com_name" prefWidth="217.0" text="الاسم" />
+                  <TableColumn fx:id="com_count" prefWidth="155.0" text="عدد المحاضرات التي حضرها" />
+               </columns>
+            </TableView>
+            <ImageView fitHeight="71.0" fitWidth="64.0" layoutX="6.0" layoutY="86.0" onMouseClicked="#exportToExcel" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../export.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="attends90_label" layoutX="10.0" layoutY="158.0" prefHeight="21.0" prefWidth="57.0" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="lecture_root2" layoutX="14.0" layoutY="178.0" prefHeight="259.0" prefWidth="570.0" style="-fx-background-color: white;" visible="false">
+         <children>
+            <TableView fx:id="lectureTable" editable="true" layoutX="211.0" layoutY="32.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="200.0" prefWidth="334.0" style="-fx-background-color: white">
+               <columns>
+                  <TableColumn fx:id="la_id" prefWidth="72.0" text="رقم الطالب" />
+                  <TableColumn fx:id="la_name" prefWidth="181.0" text="الاسم" />
+                  <TableColumn fx:id="att" text="حالة الحضور" />
+               </columns>
+            </TableView>
+            <TextArea fx:id="lec_details" editable="false" layoutX="13.0" layoutY="74.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="153.0" prefWidth="181.0" style="-fx-background-color: white; textFill=#0049ff">
+               <font>
+                  <Font name="Led Italic Font" size="12.0" />
+               </font>
+            </TextArea>
+            <Label alignment="CENTER" layoutX="63.0" layoutY="32.0" prefHeight="35.0" prefWidth="139.0" style="-fx-background-color: white;" text="معلومات المحاضرة" textFill="#0049ff">
+               <font>
+                  <Font name="Led Italic Font" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="label_lec_id" alignment="CENTER" layoutX="6.0" layoutY="37.0" onMouseClicked="#changeLec" prefHeight="37.0" prefWidth="64.0" style="-fx-background-color: white;" textFill="#0049ff">
+               <font>
+                  <Font name="Cambria" size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <ImageView fitHeight="37.0" fitWidth="44.0" layoutX="9.0" layoutY="7.0" onMouseClicked="#nav_back" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../close.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
